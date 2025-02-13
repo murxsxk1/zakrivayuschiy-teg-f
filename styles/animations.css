@@ -32,6 +32,18 @@
   }
 }
 
+.main-body {
+  fill: none;
+}
+
+.core {
+  fill: none;
+}
+
+.sparks {
+  opacity: 0;
+}
+
 /*Анимация при наведении*/
 
 .like-icon:hover .main-body {
@@ -87,15 +99,5 @@
   animation: sparks 0.3s ease-in 0.3s 1;
 }
 
-.main-body {
-  fill: none;
-}
 
-.core {
-  fill: none;
-}
-
-.sparks {
-  opacity: 0;
-}
 

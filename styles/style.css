@@ -16,8 +16,6 @@
   font-family: var(--main-font, sans-serif);
   font-variation-settings: 'wght' var(--main-font-weight-paragraph), 'wdth' 100, 'opsz' 0;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content;
   gap: 100px;
   padding: 100px 0;
   justify-items: center;
@@ -29,7 +27,7 @@
 .header {
   font-family: var(--accent-font);
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  border: 2px solid var(--text-color);
+  border: var(--border-primary);
   background-color: var(--shadow-color);
 }
 
@@ -62,28 +60,28 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  
 }
 
 .main__article {
   display: flex;
   flex-direction: column;
-  inline-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
-  border: 2px solid var(--text-color);
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  border: var(--border-primary);
   background-color: var(--shadow-color);
 }
 
 .main__article-title {
   font-variation-settings: 'wght' var(--main-font-weight-title), 'wdth' 100, 'opsz' 0;
   font-size: 18px;
-  line-height: 21.78px;
+  line-height: 22px;
   text-align: left;
   text-wrap: wrap;
-  padding: 3px 10px;
+  padding: 5px 10px 4px;
 }
 
 .main__article-image-block {
   position: relative;
+  border-block: var(--border-primary);
 }
 
 .main__article:nth-of-type(2) .main__article-image {
@@ -116,13 +114,12 @@
 
 .main__article-image {
   width: 100%;
-  height: 100%;
-  outline: 2px solid var(--text-color);
+  display: block;
 }
 
 .main__article-watermark {
   position: absolute;
-  top: 25px;
+  top: 23px;
   right: 25px;
   font-family: var(--accent-font);
   font-size: 14px;
@@ -137,19 +134,18 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 25px;
+  padding: 25px 25px;
+  line-height: 21px;
 }
 
 .main__article-pargraph {
   font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0%;
 }
 
 .main__article-button-block {
   display: flex;
   justify-content: end;
-  gap: 6px;  
+  gap: 4px;  
   padding: 0 25px 25px 0;
 }
 
@@ -179,7 +175,7 @@
   font-size: 14px;
   line-height: 12.6px;
   background-color: transparent;
-  border: 2px solid var(--text-color);
+  border: var(--border-primary);
   outline: none;
   cursor: pointer;
   position: relative;
@@ -199,8 +195,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   background-color: var(--accent-color);
   transform: scaleX(0);
   transform-origin: left;
@@ -212,8 +208,8 @@
 }
 
 .card__like-button {
-  width: 130px;
-  height: 38px;
+  inline-size: 130px;
+  block-size: 38px;
 }
 
 .button__text {
@@ -221,15 +217,15 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
+  text-wrap: wrap;
 }
 
 .card__memory-button {
   display: flex;
   gap: 8px;
-  width: clamp(19.125rem, 18.0467rem + 4.6009vw, 22.1875rem);
   align-self: center;
   align-items: center;
-  padding: 15px 19px;
+  padding: 15px 20px;
   background-color: var(--shadow-color);
 }
 
@@ -239,15 +235,14 @@
 }
 
 .floppy__image {
-  width: 21px;
-  height: 21px;
+  inline-size: 21px;
+  block-size: 21px;
   fill: var(--text-color);
   transition: filter 0.7s;
 }
 
 .dialog {
-  width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  
+  inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }
 
 .dialog[open] {
@@ -266,8 +261,8 @@
 }
 
 .dialog__image {
-  width: 39px;
-  height: 39px;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .dialog__title {
@@ -295,5 +290,18 @@
 @media (width <= 375px) {
   .card__memory-button {
     flex-direction: column;
+  }
+
+  .main__article-watermark {
+    right: 11px;
+  }
+
+  .main__article-title {
+    padding: 4px 10px 5px;
+  }
+
+  .floppy__image {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }

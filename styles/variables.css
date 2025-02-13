@@ -12,4 +12,5 @@
   --button-text-color: #fff;
   --contour-color: #000;
   --fill-color: red;
+  --border-primary: 2px solid var(--text-color);
 }
