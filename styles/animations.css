@@ -21,11 +21,13 @@
 }
 
 .main-body {
-  fill: none;
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
 .core {
-  fill: none;
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .sparks {
@@ -44,6 +46,23 @@
   fill: var(--accent-color);
   transition-delay: 0.03s;
   transition-duration: 0.3s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 /*Анимация при зажатии*/
@@ -85,4 +104,23 @@
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s ease-in 0.3s 1;
+}
+
+/*Анимация при фокусе*/
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
 }

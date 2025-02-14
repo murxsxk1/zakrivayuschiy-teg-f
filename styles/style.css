@@ -17,7 +17,7 @@
   border: var(--border-primary);
   font-family: var(--accent-font);
   background-color: var(--shadow-color);
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  inline-size: var(--section-width);
 }
 
 .header__text {
@@ -53,7 +53,7 @@
   flex-direction: column;
   border: var(--border-primary);
   background-color: var(--shadow-color);
-  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  inline-size: var(--section-width);
 }
 
 .main__article-title {
@@ -137,19 +137,12 @@
 }
 
 .card__icon-button {
+  max-height: 38px;
   border: 2px solid transparent;
   padding: 0;
   outline: none;
   background-color: transparent;
   transition: border-color 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--accent-color);
 }
 
 .like-icon {
@@ -167,31 +160,6 @@
   line-height: 12.6px;
   background-color: transparent;
   cursor: pointer;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
 }
 
 .card__like-button {
@@ -223,7 +191,7 @@
 
 .floppy__image {
   fill: var(--text-color);
-  transition: filter 0.7s;
+  transition: filter 0.8s;
   inline-size: 21px;
   block-size: 21px;
 }

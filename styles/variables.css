@@ -10,21 +10,22 @@
   --text-color: #000;
   --bg-image: repeating-linear-gradient(
       to right,
-      #d3d3d3 0px,
+      #d3d3d3 0,
       #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
     repeating-linear-gradient(
       to bottom,
-      #d3d3d3 0px,
+      #d3d3d3 0,
       #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
-    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+    linear-gradient(to bottom, #e7e7e7 0, #e7e7e7 0.01%, #1a1a1a 100%);
   --button-text-color: #fff;
   --contour-color: #000;
   --fill-color: red;
   --border-primary: 2px solid var(--text-color);
+  --section-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 }
