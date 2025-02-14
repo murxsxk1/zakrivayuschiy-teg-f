@@ -1,4 +1,4 @@
-@keyframes heart {  
+@keyframes heart {
   from {
     transform: scale(1);
     transform-origin: center;
@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes sparks {  
+@keyframes sparks {
   from {
     opacity: 1;
   }
@@ -36,28 +36,28 @@
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
+  transition-duration: 0.3s;
 }
 
 .like-icon:hover .core {
   fill: var(--accent-color);
-  transition-duration: 0.3s;
   transition-delay: 0.03s;
+  transition-duration: 0.3s;
 }
 
 /*Анимация при зажатии*/
 
 .like-icon:active .core {
   fill: var(--fill-color);
-  transition-duration: 0.3s;
   transition-delay: 0.03s;
+  transition-duration: 0.3s;
 }
 
 .like-icon:active .main-body {
   fill: var(--fill-color);
-  transition-duration: 0.3s;
   transition-delay: 0.03s;
+  transition-duration: 0.3s;
 }
 
 /*Анимация при нажатии*/
@@ -69,8 +69,8 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--fill-color);
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
+  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .contour {
