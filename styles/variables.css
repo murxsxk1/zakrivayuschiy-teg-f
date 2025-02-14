@@ -8,6 +8,7 @@
   --mobile-block-width: 100%;
   --shadow-color: #fff;
   --text-color: #000;
+  --bg-color: #fff;
   --bg-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0,
