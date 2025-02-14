@@ -1,4 +1,4 @@
-# ZAKRIVAYUSCHTY-TEG-F
+# ZAKRIVAYUSCHIY-TEG-F
 
 
 Ссылка на репозиторий: https://github.com/murxsxk1/zakrivayuschiy-teg-f \
