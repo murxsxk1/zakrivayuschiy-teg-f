@@ -3,7 +3,7 @@
   justify-items: center;
   gap: 100px;
   padding: 100px 0;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, Arial, sans-serif);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
@@ -16,7 +16,7 @@
 
 .header {
   border: var(--border-primary);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   background-color: var(--shadow-color);
   inline-size: var(--section-width);
 }
@@ -72,37 +72,39 @@
   border-block: var(--border-primary);
 }
 
-.main__article:nth-of-type(2) .main__article-image {
+.filter-grayscale {
   filter: grayscale(0.7);
 }
 
-.main__article:nth-of-type(3) .main__article-image {
+.filter-saturate {
   filter: saturate(250%);
 }
 
-.main__article:nth-of-type(4) .main__article-image {
+.filter-sepia {
   filter: sepia(99%);
 }
 
-.main__article:nth-of-type(5) .main__article-image {
+.filter-invert {
   filter: invert(0.7);
 }
 
-.main__article:nth-of-type(6) .main__article-image {
+.filter-rotate {
   filter: hue-rotate(310deg);
 }
 
-.main__article:nth-of-type(7) .main__article-image {
+.filter-blur {
   filter: blur(0.2rem);
 }
 
-.main__article:nth-of-type(8) .main__article-image {
+.filter-mix {
   filter: hue-rotate(40deg) contrast(0.4) brightness(100%) sepia(30%);
 }
 
 .main__article-image {
   display: block;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .main__article-watermark {
@@ -110,7 +112,7 @@
   top: 23px;
   right: 25px;
   opacity: 50%;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   line-height: 14px;
   text-shadow: 1px var(--shadow-color);
@@ -155,11 +157,12 @@
   border: var(--border-primary);
   outline: none;
   color: var(--button-text-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   line-height: 12.6px;
   background-color: var(--shadow-color);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button {
@@ -217,7 +220,7 @@
 }
 
 .dialog__title {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
